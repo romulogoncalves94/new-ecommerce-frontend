@@ -21,7 +21,6 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadForm();
-    console.log(this.signupForm)
   }
 
   ngOnSubmit() {
@@ -33,7 +32,6 @@ export class SignupComponent implements OnInit {
       return;
     }
 
-    console.log(this.signupForm.value)
     this.authService.register(this.signupForm.value).subscribe(
       (response) => {
         this.snackBar.open('Sign up successful!', 'Close', { duration: 5000 });

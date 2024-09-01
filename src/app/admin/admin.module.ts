@@ -28,6 +28,7 @@ import {MatTableModule} from "@angular/material/table";
 import { PostCategoryComponent } from './components/post-category/post-category.component';
 import {AppModule} from "../app.module";
 import { PostProductComponent } from './components/post-product/post-product.component';
+import {MatListModule} from "@angular/material/list";
 
 
 @NgModule({
@@ -44,7 +45,9 @@ import { PostProductComponent } from './components/post-product/post-product.com
     ReactiveFormsModule,
     MatButtonModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCardModule,
+    MatListModule
   ]
 })
 export class AdminModule { }

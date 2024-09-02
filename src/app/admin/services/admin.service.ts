@@ -15,37 +15,49 @@ export class AdminService {
   addCategory(categoryDTO): Observable<any> {
     return this.http.post(BASIC_URL + 'api/admin/category', categoryDTO, {
       headers: this.createAuthorizationHeader(),
-    })
+    });
   }
 
   getAllCategories(): Observable<any> {
     return this.http.get(BASIC_URL + 'api/admin/categories', {
       headers: this.createAuthorizationHeader(),
-    })
+    });
   }
 
   addProduct(productDTO): Observable<any> {
     return this.http.post(BASIC_URL + 'api/admin/product', productDTO, {
       headers: this.createAuthorizationHeader(),
-    })
+    });
   }
 
   getAllProducts(): Observable<any> {
     return this.http.get(BASIC_URL + 'api/admin/products', {
       headers: this.createAuthorizationHeader(),
-    })
+    });
   }
 
   getAllProductByName(name): Observable<any> {
     return this.http.get(BASIC_URL + `api/admin/search/${name}`, {
       headers: this.createAuthorizationHeader(),
-    })
+    });
   }
 
   deleteProduct(productId): Observable<any> {
     return this.http.delete(BASIC_URL + `api/admin/product/${productId}`, {
       headers: this.createAuthorizationHeader(),
-    })
+    });
+  }
+
+  addCoupon(couponDTO): Observable<any> {
+    return this.http.post(BASIC_URL + 'api/admin/coupons', couponDTO, {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
+  getCoupons(): Observable<any> {
+    return this.http.get(BASIC_URL + 'api/admin/coupons', {
+      headers: this.createAuthorizationHeader(),
+    });
   }
 
   private createAuthorizationHeader(): HttpHeaders {

@@ -29,6 +29,8 @@ import { PostCategoryComponent } from './components/post-category/post-category.
 import {AppModule} from "../app.module";
 import { PostProductComponent } from './components/post-product/post-product.component';
 import {MatListModule} from "@angular/material/list";
+import {PostCouponComponent} from "./components/post-coupon/post-coupon.component";
+import {CouponsComponent} from "./components/coupons/coupons.component";
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import {MatListModule} from "@angular/material/list";
     AdminComponent,
     DashboardComponent,
     PostCategoryComponent,
-    PostProductComponent
+    PostProductComponent,
+    PostCouponComponent,
+    CouponsComponent
   ],
   imports: [
     CommonModule,
@@ -47,7 +51,9 @@ import {MatListModule} from "@angular/material/list";
     MatIconModule,
     MatSelectModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatDatepickerModule,
+    MatTableModule
   ]
 })
 export class AdminModule { }

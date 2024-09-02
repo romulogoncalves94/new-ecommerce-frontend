@@ -11,7 +11,8 @@ import {MatDividerModule} from "@angular/material/divider";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
-import { CartComponent } from './components/cart/cart.component';
+import {CartComponent} from './components/cart/cart.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { CartComponent } from './components/cart/cart.component';
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDatepickerModule
   ]
 })
 export class CustomerModule {

@@ -34,7 +34,6 @@ export class PostCategoryComponent implements OnInit {
   addCategory() {
     if (this.categoryForm.valid) {
       this.adminService.addCategory(this.categoryForm.value).subscribe(res => {
-        console.log(res)
         if (res.id != null) {
           this.snackBar.open('Category Posted Successfully!', 'Close', {
             duration: 5000

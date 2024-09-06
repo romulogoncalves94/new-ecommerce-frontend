@@ -14,6 +14,8 @@ import {MatInputModule} from "@angular/material/input";
 import {CartComponent} from './components/cart/cart.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import { PlaceOrderComponent } from './components/place-order/place-order.component';
+import { MyOrdersComponent } from './components/my-orders/my-orders.component';
+import {MatTableModule} from "@angular/material/table";
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { PlaceOrderComponent } from './components/place-order/place-order.compon
     CustomerComponent,
     DashboardComponent,
     CartComponent,
-    PlaceOrderComponent
+    PlaceOrderComponent,
+    MyOrdersComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +37,8 @@ import { PlaceOrderComponent } from './components/place-order/place-order.compon
     MatIconModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatTableModule
   ]
 })
 export class CustomerModule {

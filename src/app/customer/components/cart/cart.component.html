@@ -38,7 +38,7 @@
     <div class="total-price" *ngIf="order.couponName != null">
       Coupon Applied: {{ order.couponName }}
     </div>
-    <button mat-raised-button color="primary">Place Order</button>
+    <button mat-raised-button color="primary" (click)="placeOrder()">Place Order</button>
 
     <div class="container" *ngIf="order.couponName == null">
       <form [formGroup]="couponForm" (ngSubmit)="applyCoupon()">

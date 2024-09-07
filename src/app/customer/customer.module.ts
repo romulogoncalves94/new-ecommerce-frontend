@@ -16,7 +16,8 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import { PlaceOrderComponent } from './components/place-order/place-order.component';
 import { MyOrdersComponent } from './components/my-orders/my-orders.component';
 import {MatTableModule} from "@angular/material/table";
-
+import {ViewOrderedProductsComponent} from "./components/view-ordered-products/view-ordered-products.component";
+import { ReviewOrderedProductComponent } from './components/review-ordered-product/review-ordered-product.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import {MatTableModule} from "@angular/material/table";
     DashboardComponent,
     CartComponent,
     PlaceOrderComponent,
-    MyOrdersComponent
+    MyOrdersComponent,
+    ViewOrderedProductsComponent,
+    ReviewOrderedProductComponent
   ],
   imports: [
     CommonModule,

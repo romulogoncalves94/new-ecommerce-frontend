@@ -90,6 +90,18 @@ export class CustomerService {
     });
   }
 
+  giveReview(reviewDto): Observable<any> {
+    return this.http.post(BASIC_URL + `api/customer/review`, reviewDto, {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
+  getProductDetailById(productId: number): Observable<any> {
+    return this.http.get(BASIC_URL + `api/customer/product/${productId}`, {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
   private createAuthorizationHeader(): HttpHeaders {
     return new HttpHeaders().set(
       'Authorization', 'Bearer ' + UserStorageService.getToken()

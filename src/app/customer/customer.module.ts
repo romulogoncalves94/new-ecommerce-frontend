@@ -20,6 +20,7 @@ import {ViewOrderedProductsComponent} from "./components/view-ordered-products/v
 import { ReviewOrderedProductComponent } from './components/review-ordered-product/review-ordered-product.component';
 import {MatSelectModule} from "@angular/material/select";
 import { ViewProductDetailComponent } from './components/view-product-detail/view-product-detail.component';
+import { ViewWishlistComponent } from './components/view-wishlist/view-wishlist.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ViewProductDetailComponent } from './components/view-product-detail/vie
     MyOrdersComponent,
     ViewOrderedProductsComponent,
     ReviewOrderedProductComponent,
-    ViewProductDetailComponent
+    ViewProductDetailComponent,
+    ViewWishlistComponent
   ],
     imports: [
         CommonModule,

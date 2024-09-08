@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {CustomerService} from "../../services/customer.service";
 import {ActivatedRoute} from "@angular/router";
+import {UserStorageService} from "../../../services/storage/user-storage.service";
 
 @Component({
   selector: 'app-view-product-detail',
@@ -36,6 +37,25 @@ export class ViewProductDetailComponent implements OnInit {
         element.processedImg = 'data:image/jpeg;base64,' + element.returnedImg;
         this.reviews.push(element);
       });
+    });
+  }
+
+  addToWishList() {
+    const wishListDTO = {
+      productId: this.productId,
+      userId: UserStorageService.getUserId()
+    }
+
+    this.customerService.addProductToWishlist(wishListDTO).subscribe(res => {
+      if (res.id != null) {
+        this.snackBar.open('Product added to WishList Successfully!', 'Close', {
+          duration: 5000
+        });
+      } else {
+        this.snackBar.open('Already in Wishlist', 'ERROR', {
+          duration: 5000
+        });
+      }
     });
   }
 

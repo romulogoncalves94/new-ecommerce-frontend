@@ -102,6 +102,19 @@ export class CustomerService {
     });
   }
 
+  addProductToWishlist(wishlistDTO): Observable<any> {
+    return this.http.post(BASIC_URL + `api/customer/wishlist`, wishlistDTO, {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
+  getWishListByUserId(): Observable<any> {
+    const userId = UserStorageService.getUserId();
+    return this.http.get(BASIC_URL + `api/customer/wishlist/${userId}`, {
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+
   private createAuthorizationHeader(): HttpHeaders {
     return new HttpHeaders().set(
       'Authorization', 'Bearer ' + UserStorageService.getToken()
